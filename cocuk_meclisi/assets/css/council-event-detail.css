@@ -1,0 +1,282 @@
+/* Temel Değişkenler */
+:root {
+    --primary-color: #FF9AA2;
+    --secondary-color: #B5EAD7;
+    --accent-color: #FFDAC1;
+    --text-color: #6B5B95;
+    --soft-pink: #FFB7B2;
+    --soft-yellow: #FFFFD8;
+    --soft-blue: #C7CEEA;
+}
+
+/* Ana Konteyner */
+.council-page {
+    font-family: 'Comfortaa', 'Nunito', sans-serif;
+}
+
+/* Hero Bölümü */
+.event-hero {
+    background: linear-gradient(135deg, var(--soft-pink), var(--soft-blue));
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+/* Animasyonlu Elementler */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.element {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon-1 { top: 20%; left: 10%; }
+.star-1 { top: 30%; right: 15%; animation-delay: -2s; }
+.cloud-1 { bottom: 20%; left: 20%; animation-delay: -1s; }
+
+/* Geri Dönüş Butonu */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    color: var(--primary-color);
+    transform: translateX(-5px);
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+/* Etkinlik Durumu */
+.event-status-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.event-status-badge.aktif {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.event-status-badge.tamamlandi {
+    background: var(--soft-pink);
+    color: var(--text-color);
+}
+
+/* Etkinlik Başlığı */
+.event-hero .event-title {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Detay Kartı */
+.event-details-section {
+    margin-top: -40px;
+    padding-bottom: 60px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(107, 91, 149, 0.1);
+}
+
+/* Bilgi Grid'i */
+.event-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed rgba(107, 91, 149, 0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-item .icon {
+    width: 40px;
+    height: 40px;
+    background: var(--soft-yellow);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    flex-shrink: 0;
+}
+
+.info-item .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item .text strong {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.info-item .text span {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* Açıklama Bölümü */
+.event-description {
+    margin-bottom: 2rem;
+}
+
+.event-description h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.description-content {
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 1rem;
+    white-space: pre-line;
+}
+
+/* Katılım Bölümü */
+.event-action {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 2px dashed rgba(107, 91, 149, 0.1);
+}
+
+.join-btn {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background: var(--text-color);
+    transform: translateY(-3px);
+}
+
+.action-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Modal Stilleri */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+}
+
+.modal-header {
+    background: var(--soft-yellow);
+    border-radius: 20px 20px 0 0;
+    border: none;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.form-label {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid rgba(107, 91, 149, 0.1);
+    border-radius: 10px;
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Animasyonlar */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .event-hero {
+        padding: 60px 0 40px;
+    }
+    
+    .event-hero .event-title {
+        font-size: 2rem;
+    }
+    
+    .event-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+    
+    .event-card {
+        padding: 1.5rem;
+    }
+    
+    .join-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

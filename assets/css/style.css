@@ -1,0 +1,129 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+/* Form stilleri */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+} 
+
+/* Mevcut CSS'e eklenecek */
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Gallery */
+.gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Projects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .hero-section img {
+        margin-top: 30px;
+    }
+    
+    .contact-info {
+        margin-top: 30px;
+    }
+}
