@@ -202,32 +202,12 @@ include 'includes/header.php';
                                         <span class="ms-2"><?= $training['registered'] ?>/<?= $training['capacity'] ?></span>
                                     </div>
                                 </div>
-
-                                <?php if (!isLoggedIn()): ?>
-                                    <a href="register.php" class="btn btn-primary btn-sm w-100 rounded-pill">
-                                        <i class="bi bi-person-plus me-1"></i>Kayıt Ol ve Başvur
-                                    </a>
-                                <?php elseif (in_array($training['id'], $user_applications)): ?>
-                                    <button class="btn btn-success btn-sm w-100 rounded-pill" disabled>
-                                        <i class="bi bi-check-circle me-1"></i>Başvuru Yaptınız
-                                    </button>
-                                <?php elseif (!isProfileComplete($_SESSION['user_id'])): ?>
-                                    <a href="admin/profile.php" class="btn btn-warning btn-sm w-100 rounded-pill">
-                                        <i class="bi bi-person-gear me-1"></i>Profili Tamamla
-                                    </a>
-                                <?php elseif ($training['registered'] >= $training['capacity']): ?>
-                                    <button class="btn btn-secondary btn-sm w-100 rounded-pill" disabled>
-                                        <i class="bi bi-x-circle me-1"></i>Kontenjan Dolu
-                                    </button>
-                                <?php else: ?>
-                                    <form action="training_actions.php" method="POST">
-                                        <input type="hidden" name="action" value="apply">
-                                        <input type="hidden" name="training_id" value="<?= $training['id'] ?>">
-                                        <button type="submit" class="btn btn-primary btn-sm w-100 rounded-pill">
-                                            <i class="bi bi-send me-1"></i>Başvur
-                                        </button>
-                                    </form>
-                                <?php endif; ?>
+					<div class="card-footer bg-transparent border-0 pt-0">
+                        <a href="training-detail.php?id=<?= $training['id'] ?>" 
+                           class="btn btn-primary w-100 rounded-pill btn-hover-elevate">
+                            <i class="bi bi-info-circle me-2"></i>Detayları Gör
+                        </a>
+                    </div>
                             </div>
                         </div>
                     <?php endforeach; else: ?>

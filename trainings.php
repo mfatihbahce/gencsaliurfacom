@@ -185,7 +185,7 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-					                    <div class="card-footer bg-transparent border-0 pt-0">
+					<div class="card-footer bg-transparent border-0 pt-0">
                         <a href="training-detail.php?id=<?= $training['id'] ?>" 
                            class="btn btn-primary w-100 rounded-pill btn-hover-elevate">
                             <i class="bi bi-info-circle me-2"></i>Detayları Gör

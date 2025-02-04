@@ -15,6 +15,32 @@
                     <i class="bi bi-bar-chart-fill"></i> Anket Sonuçları
                 </a>
             </li>
+			<!-- Çocuk Meclisi - YENİ -->
+            <li class="nav-item">
+                <a class="nav-link" href="#cocukmeclisiabout" data-bs-toggle="collapse" 
+                   role="button" aria-expanded="false" aria-controls="cocukmeclisiabout">
+                    <i class="bi bi-megaphone-fill"></i> Çocuk Meclisi
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <div class="collapse" id="cocukmeclisiabout">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/cocuk-meclisi-about-manage">
+                                <i class="bi bi-info-circle"></i> Meclis Hakkında
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="collapse" id="cocukmeclisiabout">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/cocuk-meclisi-news-manage">
+                                <i class="bi bi-calendar-event-fill"></i> Çocuk Meclisi Etkinlikler
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <!-- Bildirim Yönetimi - YENİ -->
             <li class="nav-item">
                 <a class="nav-link" href="#submissionsSubmenu" data-bs-toggle="collapse" 
@@ -42,6 +68,7 @@
                     </ul>
                 </div>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="<?= SITE_URL ?>/admin/about-manage">
                     <i class="bi bi-info-circle"></i> Hakkımızda
@@ -73,26 +100,69 @@
                     <i class="bi bi-building"></i> Birimler
                 </a>
             </li>
+			<!-- Eğitimler - YENİ -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= SITE_URL ?>/admin/training-manage">
+                <a class="nav-link" href="#egitimler" data-bs-toggle="collapse" 
+                   role="button" aria-expanded="false" aria-controls="egitimler">
                     <i class="bi bi-mortarboard"></i> Eğitimler
+                    <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <div class="collapse" id="egitimler">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/training-manage">
+                                <i class="bi bi-mortarboard"></i> Eğitimler
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="collapse" id="egitimler">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/training-applications-full">
+                                <i class="bi bi-calendar-event-fill"></i> Tüm Başvurular
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="collapse" id="egitimler">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/student-list">
+                                <i class="bi bi-people"></i> Öğrenci Listesi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
+
+			<!-- Okul Talep Eğitimler - YENİ -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= SITE_URL ?>/admin/student-list">
-                    <i class="bi bi-people"></i> Öğrenci Listesi
+                <a class="nav-link" href="#okultalepleri" data-bs-toggle="collapse" 
+                   role="button" aria-expanded="false" aria-controls="okultalepleri">
+                    <i class="bi bi-collection"></i> Okul Eğitim Talepleri
+                    <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <div class="collapse" id="okultalepleri">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/training-types">
+                                <i class="bi bi-collection"></i> Eğitim Türü
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="collapse" id="okultalepleri">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= SITE_URL ?>/admin/training-requests">
+                                <i class="bi bi-clipboard-check"></i> Eğitim Talep Listesi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= SITE_URL ?>/admin/training-types">
-                    <i class="bi bi-collection"></i> Eğitim Türü
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= SITE_URL ?>/admin/training-requests">
-                    <i class="bi bi-clipboard-check"></i> Eğitim Talep Listesi
-                </a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="<?= SITE_URL ?>/admin/seo-settings">
                     <i class="bi bi-gear"></i> SEO Ayarları
@@ -103,10 +173,12 @@
                     <i class="bi bi-people-fill"></i> Kullanıcılar
                 </a>
             </li>
+
         <?php endif; ?>
         
         <!-- Her kullanıcı için görünür -->
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'user'): ?>
+
             <li class="nav-item">
                 <a class="nav-link <?= str_contains($current_page, 'userlistedu') ? 'active' : '' ?>" 
                    href="<?= SITE_URL ?>/admin/userlistedu">
@@ -124,7 +196,7 @@
         <?php endif; ?>
     </ul>
 </div>
-
+<br><br><br><br><br><br>
 <style>
 /* Sidebar alt menü stilleri */
 .sub-menu {

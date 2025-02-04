@@ -218,9 +218,12 @@ include 'includes/header.php';
         ?>
             <div class="col-md-3" data-aos="fade-up">
                 <div class="card h-100 training-card">
+					
+					<!--
                     <div class="card-img-top tech-pattern p-4 text-center">
                         <i class="bi bi-mortarboard display-4 text-primary"></i>
                     </div>
+					-->
                     
                     <div class="card-body">
                         <h5 class="card-title fw-bold"><?= htmlspecialchars($type['name']) ?></h5>
@@ -276,9 +279,12 @@ include 'includes/header.php';
         ?>
             <div class="col-md-3" data-aos="fade-up">
                 <div class="card h-100 unit-card">
+					
+					<!--
                     <div class="card-img-top tech-pattern p-4 text-center">
                         <i class="bi bi-building display-4 text-primary"></i>
                     </div>
+					-->
                     
                     <div class="card-body">
                         <h5 class="card-title fw-bold"><?= htmlspecialchars($unit['name']) ?></h5>

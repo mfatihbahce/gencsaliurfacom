@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# PHP uzantısını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# 404 yönlendirmesi
+ErrorDocument 404 /404.php
+
+# Var olmayan sayfaları 404'e yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.php [L]

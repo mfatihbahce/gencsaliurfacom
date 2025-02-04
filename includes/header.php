@@ -312,19 +312,21 @@ $seo = $db->query("SELECT * FROM seo_settings WHERE page_identifier = ?", [$curr
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link <?= $current_page == 'about' ? 'active' : '' ?>" href="<?= SITE_URL ?>/about">
-                                <i class="bi bi-info-circle"></i>Hakkımızda
-                            </a>
-                        </li>
+
 
                         <!-- İçerikler Dropdown -->
                         <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle <?= in_array($current_page, ['projects', 'news', 'places']) ? 'active' : '' ?>" 
        href="#" role="button" data-bs-toggle="dropdown">
-        <i class="bi bi-collection"></i>İçerikler <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
+        <i class="bi bi-bank"></i>Şehrim <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
     </a>
                             <ul class="dropdown-menu">
+								<li>
+                                    <a class="dropdown-item <?= $current_page == 'about' ? 'active' : '' ?>" 
+                                       href="<?= SITE_URL ?>/about">
+                                        <i class="bi bi-people-fill"></i> Hakkımızda
+                                    </a>
+                                </li>
                                 <li>
                                     <a class="dropdown-item <?= $current_page == 'projects' ? 'active' : '' ?>" 
                                        href="<?= SITE_URL ?>/projects">
@@ -390,14 +392,14 @@ $seo = $db->query("SELECT * FROM seo_settings WHERE page_identifier = ?", [$curr
     </a>
     <ul class="dropdown-menu council-menu">
         <li>
-            <a class="dropdown-item <?= $current_page == '/#' ? 'active' : '' ?>" 
-               href="<?= SITE_URL ?>/#">
+            <a class="dropdown-item <?= $current_page == '/cocuk_meclisi/cocuk-meclisi-about' ? 'active' : '' ?>" 
+               href="<?= SITE_URL ?>/cocuk_meclisi/cocuk-meclisi-about">
                 <i class="fa-solid fa-circle-info me-2"></i>Hakkımızda
             </a>
         </li>
         <li>
-            <a class="dropdown-item <?= $current_page == '/#' ? 'active' : '' ?>" 
-               href="<?= SITE_URL ?>/#">
+            <a class="dropdown-item <?= $current_page == '/cocuk_meclisi/cocuk-meclisi-news' ? 'active' : '' ?>" 
+               href="<?= SITE_URL ?>/cocuk_meclisi/cocuk-meclisi-news">
                 <i class="fa-solid fa-calendar-days me-2"></i>Etkinlikler
             </a>
         </li>
@@ -431,7 +433,13 @@ $seo = $db->query("SELECT * FROM seo_settings WHERE page_identifier = ?", [$curr
         </li>
     </ul>
 </li>
+			
 						
+						<li class="nav-item">
+    <a class="nav-link <?= $current_page == 'gencfest' ? 'active' : '' ?>" href="<?= SITE_URL ?>/gencfest">
+        <i class="bi bi-stars"></i>GençFest'25
+    </a>
+</li>
 						<!-- Fikrini Paylaş - YENİ -->
 <li class="nav-item">
     <a class="nav-link <?= $current_page == 'youth-survey' ? 'active' : '' ?>" href="<?= SITE_URL ?>/youth-survey">
